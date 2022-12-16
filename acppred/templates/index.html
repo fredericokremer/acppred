@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Anticancer Peptide Predictor</h1>
+    <hr>
+    <form action="/predict" method="POST">
+        <textarea name="sequence"></textarea>
+        <input type="submit" value='submit'/>
+    </form>
+    {% if prediction != None %}
+        <hr>
+        <p><b>Peptide:</b> {{sequence}}</p>
+        <p><b>Score:</b> {{prediction}}</p>
+    {% endif %}
+</body>
+</html>
