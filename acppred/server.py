@@ -14,4 +14,4 @@ def predict():
     prediction = model.predict(sequence)
     return render_template('index.html', sequence=sequence, prediction=prediction)
 
-app.run(host='0.0.0.0', port=8080)
+app.run(host='0.0.0.0', port=10000)
